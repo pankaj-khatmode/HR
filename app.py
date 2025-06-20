@@ -18,9 +18,18 @@ st.set_page_config(
 # Load dataset
 @st.cache_data
 def load_data():
-    file_path = r"C:\Users\Pankaj\Downloads\archive\archive\WA_Fn-UseC_-HR-Employee-Attrition.csv"
-    df = pd.read_csv(file_path)
+    # URL to the dataset on GitHub
+    url = "https://raw.githubusercontent.com/PankajYourUsername/employee-attrition-app/main/dataset/WA_Fn-UseC_-HR-Employee-Attrition.csv"
+    df = pd.read_csv(url)
     return df
+
+# Check if dataset exists
+try:
+    df = load_data()
+except Exception as e:
+    st.error(f"Error loading dataset: {str(e)}")
+    st.info("Please upload your dataset to the repository and update the URL in the code.")
+    st.stop()
 
 df = load_data()
 
