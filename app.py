@@ -19,7 +19,7 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     # URL to the dataset on GitHub
-    url = "https://raw.githubusercontent.com/PankajYourUsername/employee-attrition-app/main/dataset/WA_Fn-UseC_-HR-Employee-Attrition.csv"
+    url = "WA_Fn-UseC_-HR-Employee-Attrition.csv"
     df = pd.read_csv(url)
     return df
 
