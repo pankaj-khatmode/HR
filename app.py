@@ -21,7 +21,7 @@ def load_data():
     # URL to the dataset on GitHub
     url = "https://github.com/pankaj-khatmode/HR/blob/main/WA_Fn-UseC_-HR-Employee-Attrition.csv"
     df = pd.read_csv(url, quotechar='"', on_bad_lines='skip')
-  df.columns = df.columns.str.strip()
+    df.columns = df.columns.str.strip()
     return df
 
 # Check if dataset exists
