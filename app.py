@@ -20,7 +20,7 @@ st.set_page_config(
 def load_data():
     # URL to the dataset on GitHub
     url = "https://github.com/pankaj-khatmode/HR/blob/main/WA_Fn-UseC_-HR-Employee-Attrition.csv"
-    df = pd.read_csv(url)
+    df = pd.read_csv(url, quotechar='"', on_bad_lines='skip')
     return df
 
 # Check if dataset exists
